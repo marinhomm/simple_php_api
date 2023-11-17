@@ -8,19 +8,19 @@ use App\Models\Language;
 class LanguageRepository implements LanguageRepositoryInterface
 {
     
-    public function getAll()
+    public function get()
     {
-        return NULL;
-    }
-
-    public function getById($id)
-    {
-        return NULL;
+        return Language::all();
     }
 
     public function save($data)
     {
         return Language::create($data);
+    }
+
+    public function getById($id)
+    {
+        return NULL;
     }
 
     public function update($id)

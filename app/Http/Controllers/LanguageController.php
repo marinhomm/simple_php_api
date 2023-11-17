@@ -12,12 +12,21 @@ class LanguageController extends Controller
         
     }
     
-    public function save(Request $request)
+    public function get()
+    {
+        try {
+            return $this->languageService->get();
+        } catch (Throwable $th) {
+            throw $th;
+        }
+    }
+
+	public function save(Request $request)
     {
        try {
-        return $this->languageService->save($request->name, $request->release_year);
+           return $this->languageService->save($request->name, $request->release_year);
        } catch (Throwable $th) {
-        throw $th;
+		   throw $th;
        }
     }
 }

@@ -10,6 +10,11 @@ class LanguageService
     {
 
     }
+
+    public function get()
+    {
+        return $this->languageRepository->get();
+    }
     
     public function save($name, $releaseYear){
         

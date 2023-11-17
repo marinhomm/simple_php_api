@@ -14,6 +14,10 @@ use App\Http\Controllers\LanguageController;
 |
 */
 
+Route::get('/get',
+    [LanguageController::class, 'get']
+);
+
 Route::post('/save', 
     [LanguageController::class, 'save']
 );
